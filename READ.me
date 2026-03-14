@@ -1,0 +1,213 @@
+# JobConnect - MERN Stack Job Portal
+
+![JobConnect](https://img.shields.io/badge/MERN-Stack-blue) ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green) ![React](https://img.shields.io/badge/React-17-blue) ![Node](https://img.shields.io/badge/Node.js-18-green) ![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-blue)
+
+A full stack job portal web application built with the MERN stack as a Final Year Project. JobConnect allows recruiters to post jobs and manage applicants, while job seekers can search, filter, and apply for jobs with resume upload.
+
+---
+
+## 🚀 Live Demo
+
+- **Frontend:** Coming Soon
+- **Backend API:** Coming Soon
+
+---
+
+## ✨ Features
+
+### For Job Seekers
+- Register and login securely with JWT
+- Browse and search all job listings
+- Filter jobs by location, type and skills
+- Apply to jobs with cover letter and resume (PDF)
+- Track application status (Applied, Reviewed, Accepted, Rejected)
+- Personal dashboard to manage applications
+
+### For Recruiters
+- Register and login as a recruiter
+- Post new job listings
+- Manage and delete job postings
+- View all applicants for each job
+- Update application status for each candidate
+- View applicant resumes and skills
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Tailwind CSS
+- React Router DOM
+- Axios
+- React Hot Toast
+- React Icons
+- Context API for state management
+
+### Backend
+- Node.js
+- Express.js
+- MongoDB with Mongoose
+- JWT Authentication
+- Bcrypt.js for password hashing
+- Multer for file uploads
+
+### Database
+- MongoDB Atlas (Cloud)
+
+---
+
+## 📁 Folder Structure
+
+```
+JobConnect/
+├── backend/
+│   ├── config/
+│   │   └── db.js
+│   ├── controllers/
+│   │   ├── authController.js
+│   │   ├── jobController.js
+│   │   └── applicationController.js
+│   ├── middleware/
+│   │   └── authMiddleware.js
+│   ├── models/
+│   │   ├── User.js
+│   │   ├── Job.js
+│   │   └── Application.js
+│   ├── routes/
+│   │   ├── authRoutes.js
+│   │   ├── jobRoutes.js
+│   │   └── applicationRoutes.js
+│   ├── uploads/
+│   ├── .env
+│   └── server.js
+│
+└── frontend/
+    ├── public/
+    └── src/
+        ├── components/
+        │   └── Navbar.js
+        ├── context/
+        │   └── AuthContext.js
+        ├── pages/
+        │   ├── Home.js
+        │   ├── Login.js
+        │   ├── Register.js
+        │   ├── Jobs.js
+        │   ├── JobDetail.js
+        │   ├── Dashboard.js
+        │   └── PostJob.js
+        ├── routes/
+        │   └── PrivateRoute.js
+        ├── utils/
+        │   └── axiosInstance.js
+        └── App.js
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+- Node.js installed
+- MongoDB Atlas account
+- Git installed
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/YOURUSERNAME/JobConnect.git
+cd JobConnect
+```
+
+### 2. Backend Setup
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file in the backend folder:
+```
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_jwt_secret_key
+```
+
+Start the backend:
+```bash
+npm run dev
+```
+
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+npm start
+```
+
+---
+
+## 🔑 Environment Variables
+
+| Variable | Description |
+|----------|-------------|
+| `PORT` | Port number for the server (default: 5000) |
+| `MONGO_URI` | MongoDB Atlas connection string |
+| `JWT_SECRET` | Secret key for JWT token generation |
+
+---
+
+## 📡 API Endpoints
+
+### Auth Routes
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| POST | `/api/auth/register` | Register new user | Public |
+| POST | `/api/auth/login` | Login user | Public |
+| GET | `/api/auth/me` | Get current user | Private |
+| PUT | `/api/auth/profile` | Update profile | Private |
+
+### Job Routes
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| GET | `/api/jobs` | Get all jobs | Public |
+| GET | `/api/jobs/:id` | Get job by ID | Public |
+| POST | `/api/jobs` | Create new job | Recruiter |
+| PUT | `/api/jobs/:id` | Update job | Recruiter |
+| DELETE | `/api/jobs/:id` | Delete job | Recruiter |
+| GET | `/api/jobs/recruiter/myjobs` | Get recruiter's jobs | Recruiter |
+
+### Application Routes
+| Method | Endpoint | Description | Access |
+|--------|----------|-------------|--------|
+| POST | `/api/applications/:jobId` | Apply to job | Job Seeker |
+| GET | `/api/applications/my` | Get my applications | Job Seeker |
+| GET | `/api/applications/job/:jobId` | Get job applications | Recruiter |
+| PUT | `/api/applications/:id/status` | Update status | Recruiter |
+
+---
+
+## 👥 Team Members
+
+This project was built as a Final Year Project by:
+
+| Name | Role |
+|------|------|
+| 👨‍💻 Kunal Prasad | Full Stack Developer - Backend & Frontend |
+| 👩‍💻 Krishika Samtani | Frontend Developer - UI/UX Design |
+| 👩‍💻 Leeza Yadav | Frontend Developer - React Components |
+| 👨‍💻 Krishn Kumar | Backend Developer - API & Database |
+
+---
+
+## 🎓 Project Info
+
+- **Project Type:** Final Year Project
+- **Year:** 2022-2026
+- **Tech Stack:** MERN (MongoDB, Express, React, Node.js)
+- **Institution:** Arya College of Engineering
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
