@@ -23,6 +23,7 @@ const JobDetail = () => {
     const [resume, setResume] = useState(null);
     const [showApplyForm, setShowApplyForm] = useState(false);
 
+    // eslint-disable-next-line
     useEffect(() => {
         fetchJob();
     }, [id]);
@@ -95,8 +96,8 @@ const JobDetail = () => {
                         </div>
                         <span
                             className={`px-4 py-2 rounded-full font-semibold text-sm ${job.isOpen
-                                    ? "bg-green-100 text-green-600"
-                                    : "bg-red-100 text-red-600"
+                                ? "bg-green-100 text-green-600"
+                                : "bg-red-100 text-red-600"
                                 }`}
                         >
                             {job.isOpen ? "Open" : "Closed"}

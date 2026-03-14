@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { FiBriefcase, FiLogOut, FiUser, FiGrid } from "react-icons/fi";
+import { FiBriefcase, FiLogOut, FiGrid } from "react-icons/fi";
 
 const Navbar = () => {
     const { user, logout } = useAuth();
