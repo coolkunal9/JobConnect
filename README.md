@@ -67,7 +67,7 @@ Start both servers simultaneously:
 
 ---
 
-## 🔒 Backend Highlights (For Presentation)
+## 🔒 Backend 
 - **Middleware**: Custom `isAuthenticated` middleware for session security.
 - **Error Handling**: Centralized error middleware using a custom `ErrorHandler` class.
 - **Cloud Integration**: Smooth handling of multi-part form data for file uploads via `cloudinary`.
