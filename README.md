@@ -74,7 +74,8 @@ Start both servers simultaneously:
 
 ---
 
+```
 ## 👤 Project Developed By
 - **[Kunal]**
-
+```
 © 2026 JobConnect Project.
