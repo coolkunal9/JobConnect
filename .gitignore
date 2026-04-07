@@ -1,0 +1,17 @@
+# Root .gitignore
+node_modules/
+.env
+config/config.env
+*.log
+dist/
+build/
+.DS_Store
+
+# Artifacts
+task.md
+implementation_plan.md
+walkthrough.md
+PRESENTATION_GUIDE.md
+TESTING.md
+server/test.js
+server/error.log
